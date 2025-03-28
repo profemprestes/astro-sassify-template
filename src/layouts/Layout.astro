@@ -1,37 +1,54 @@
 ---
-import '../styles/global.css';
+import '../styles/global.scss';
 import '../styles/transitions.css';
 import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
 
 const { 
   title, 
-  description = "Modern SaaS landing page template with responsive design and modular sections."
+  description = "Servicio de mensajería y delivery en Mar del Plata. Envíos rápidos, seguros y económicos.",
+  lang = "es"
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
+<html lang={lang} x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <meta name="theme-color" content="#1a365d" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title} | Envios DosRuedas</title>
+    
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <ViewTransitions />
   </head>
-  <body class="antialiased bg-white dark:bg-secondary-950 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
+  <body class="antialiased bg-white dark:bg-blue-950 text-blue-900 dark:text-blue-100 transition-colors duration-300">
     <div id="page-wrapper" class="page-transition-wrapper">
       <slot />
     </div>
+    
     <script>
       // Check for user preference
       if (localStorage.getItem('darkMode') === null) {
@@ -51,6 +68,9 @@ const {
         if (pageWrapper) {
           pageWrapper.classList.add('page-loaded');
         }
+        
+        // Initialize any components that need it after page load
+        initComponents();
       });
 
       document.addEventListener('astro:before-swap', () => {
@@ -60,7 +80,22 @@ const {
           pageWrapper.classList.remove('page-loaded');
         }
       });
+      
+      // Function to initialize components after page load
+      function initComponents() {
+        // Initialize sliders if they exist
+        const sliders = document.querySelectorAll('.slider-container');
+        if (sliders.length > 0) {
+          sliders.forEach(slider => {
+            // Your slider initialization code can go here
+          });
+        }
+        
+        // Add more component initializations as needed
+      }
     </script>
-    <script src="../scripts/transitions.js"></script>
+    
+    <!-- Load transitions script with defer to improve page load performance -->
+    <script defer src="/scripts/transitions.js"></script>
   </body>
 </html>

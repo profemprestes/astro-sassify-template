@@ -1,0 +1,236 @@
+---
+const features = [
+  {
+    title: "Logística confiable",
+    description: "Soluciones adaptadas a tus necesidades",
+    icon: "box-circle-check"
+  },
+  {
+    title: "Entrega rápida",
+    description: "Optimiza tus tiempos de entrega",
+    icon: "bolt"
+  },
+  {
+    title: "Precios accesibles",
+    description: "Tarifas competitivas para tu negocio",
+    icon: "hand-holding-dollar"
+  }
+];
+
+const sliderImages = [
+  "https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//editor/Emprendedoresbannerrapidas3.webp",
+  "https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//editor/Emprendedoresbannerrapidas2.webp",
+  "https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//editor/Emprendedoresbannerrapidas.webp"
+];
+---
+
+<section class="py-20 entrepreneurs relative overflow-hidden">
+  <!-- Background gradient with animated overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-950 z-0"></div>
+  <div class="absolute inset-0 z-0 opacity-30">
+    <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-amber-400/10 rounded-full blur-3xl transform -translate-y-1/2 translate-x-1/4"></div>
+    <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-400/10 rounded-full blur-3xl transform translate-y-1/4 -translate-x-1/4"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Section Header with animated underline -->
+    <div class="text-center mb-16">
+      <div class="inline-block">
+        <span class="inline-block text-amber-300 text-sm font-semibold tracking-wider uppercase mb-2">Especial para tu negocio</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-4 relative">
+          Soluciones Especiales para Emprendedores
+          <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-400 rounded-full"></span>
+        </h2>
+      </div>
+      <p class="mx-auto text-blue-100 text-lg max-w-3xl mt-6">
+        Apoyamos a emprendedores con soluciones de mensajería y delivery confiables, rápidas y económicas. 
+        Optimiza tu logística y dedica más tiempo a hacer crecer tu negocio.
+      </p>
+    </div>
+    
+    <!-- Enhanced Image Slider with better controls -->
+    <div class="mb-16 relative overflow-hidden rounded-xl shadow-2xl max-w-4xl mx-auto">
+      <div class="slider-container flex transition-transform duration-500 ease-in-out" id="slider">
+        {sliderImages.map((img, index) => (
+          <div class="slider-item min-w-full">
+            <div 
+              class="aspect-[24/9] bg-center bg-no-repeat bg-cover w-full" 
+              style={`background-image: url(${img})`}
+            ></div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Improved Slider Navigation Dots -->
+      <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-3">
+        {sliderImages.map((_, index) => (
+          <button 
+            class="w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors slider-dot border border-amber-400/30" 
+            data-index={index}
+            aria-label={`Slide ${index + 1}`}
+          ></button>
+        ))}
+      </div>
+      
+      <!-- Added slider arrows for better navigation -->
+      <button class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-amber-400/80 hover:bg-amber-400 text-blue-900 flex items-center justify-center slider-prev focus:outline-none focus:ring-2 focus:ring-amber-300">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-amber-400/80 hover:bg-amber-400 text-blue-900 flex items-center justify-center slider-next focus:outline-none focus:ring-2 focus:ring-amber-300">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <!-- Improved Feature Cards with hover effects -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {features.map(feature => (
+        <div class="bg-white/5 hover:bg-white/10 transition-all duration-300 p-8 rounded-xl text-center transform hover:-translate-y-2 hover:shadow-xl border border-white/10 backdrop-blur-sm group">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-400/20 group-hover:bg-amber-400/30 mb-6 transition-colors">
+            <i class={`fas fa-${feature.icon} text-amber-400 text-3xl`}></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">{feature.title}</h3>
+          <p class="text-amber-300 group-hover:text-amber-200 transition-colors">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Enhanced Why Choose Us Section with better layout -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-2xl md:text-3xl font-bold text-amber-400 mb-6">¿Por qué elegirnos?</h2>
+        <div class="space-y-4 mb-8">
+          <p class="text-blue-100 text-lg">
+            En Mar del Plata, entendemos las necesidades únicas de los emprendedores. 
+            Nuestro equipo se dedica a garantizar que cada paquete llegue a tiempo, 
+            en perfectas condiciones y con costos que se ajusten a tu presupuesto.
+          </p>
+          <p class="text-blue-100 text-lg">
+            Ofrecemos planes especiales para emprendedores que necesitan envíos regulares
+            y soluciones logísticas personalizadas.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="/preguntasfrecuentes" class="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Más Información
+            <i class="fas fa-circle-info text-xl"></i>
+          </a>
+          <a href="/contacto" class="inline-flex items-center gap-2 border-2 border-amber-400 text-amber-400 hover:bg-amber-400/10 px-6 py-3 rounded-md transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+            Contacto
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <img 
+          src="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//editor/Emprendedoresbanner.webp" 
+          alt="Por qué elegirnos" 
+          class="rounded-xl shadow-2xl max-w-full h-auto transform hover:scale-105 transition-transform duration-500 border-2 border-white/10"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Enhanced slider functionality
+  document.addEventListener('astro:page-load', () => {
+    const slider = document.getElementById('slider');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    let currentIndex = 0;
+    const slideCount = dots.length;
+    
+    // Set initial active dot
+    if (dots.length > 0) {
+      dots[0].classList.add('bg-amber-400');
+    }
+    
+    // Function to update slider
+    function updateSlider() {
+      if (slider) {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      // Update active dot
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('bg-amber-400');
+          dot.classList.remove('bg-white/50');
+        } else {
+          dot.classList.remove('bg-amber-400');
+          dot.classList.add('bg-white/50');
+        }
+      });
+    }
+    
+    // Set up automatic sliding
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlider();
+    }, 5000);
+    
+    // Set up dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+        // Reset interval when manually navigating
+        clearInterval(interval);
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % slideCount;
+          updateSlider();
+        }, 5000);
+      });
+    });
+    
+    // Set up arrow navigation
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlider();
+      });
+    }
+  });
+</script>
+
+<style>
+  .slider-container {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slider-item {
+    scroll-snap-align: start;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .entrepreneurs {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Removed the ::before pseudo-element since we're using a better background approach */
+  
+  /* Add a subtle pulse animation to the feature icons */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .fas {
+    animation: pulse 3s ease-in-out infinite;
+  }
+</style>

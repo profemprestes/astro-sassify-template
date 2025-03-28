@@ -40,19 +40,19 @@
   }
   
   .btn-primary {
-    @apply btn bg-accent-400 hover:bg-accent-500 text-black shadow-md hover:shadow-lg;
+    @apply btn bg-amber-400 hover:bg-amber-500 text-blue-900 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply btn bg-primary-600 hover:bg-primary-700 text-white shadow-md hover:shadow-lg;
+    @apply btn bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg;
   }
   
   .btn-accent {
-    @apply btn bg-accent-500 hover:bg-accent-600 text-black shadow-md hover:shadow-lg;
+    @apply btn bg-amber-500 hover:bg-amber-600 text-blue-900 shadow-md hover:shadow-lg;
   }
   
   .btn-outline {
-    @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+    @apply btn border-2 border-blue-300 dark:border-blue-700 hover:bg-blue-100 dark:hover:bg-blue-800 text-blue-900 dark:text-blue-100;
   }
   
   .container-custom {
@@ -64,21 +64,41 @@
   }
   
   .card {
-    @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
+    @apply bg-white dark:bg-blue-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-blue-200 dark:border-blue-800;
+  }
+  
+  /* Define font display for Lexend */
+  .font-display {
+    font-family: 'Lexend', sans-serif;
   }
 }
 
 /* Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 .fade-in {
-  @apply animate-fade-in;
+  animation: fade-in 0.5s ease-out forwards;
 }
 
 .slide-up {
-  @apply animate-slide-up;
+  animation: slide-up 0.5s ease-out forwards;
 }
 
 .slide-down {
-  @apply animate-slide-down;
+  animation: slide-down 0.5s ease-out forwards;
 }
 
 /* Accessibility */
@@ -89,13 +109,21 @@
 /* Focus styles for keyboard navigation */
 :focus-visible {
   outline: none;
-  ring-width: 2px;
-  ring-color: var(--primary-500);
+  @apply ring-2 ring-amber-400;
 }
 
 @media (prefers-color-scheme: dark) {
   :focus-visible {
-    ring-color: var(--primary-400);
+    @apply ring-amber-300;
   }
 }
-/* Remove extra closing brace as it has no matching opening brace */
+
+/* Page transition styles */
+.page-transition-wrapper {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-loaded {
+  opacity: 1;
+}

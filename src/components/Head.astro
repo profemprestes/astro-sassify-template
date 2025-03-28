@@ -1,0 +1,131 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = "Mensajería Express en Mar del Plata | Envíos Urgentes y Delivery Rápido",
+  description = "Servicio de mensajería y delivery express en Mar del Plata. Entregas rápidas, seguras y económicas. ¡Cotizá tu envío ahora!",
+  image = "../assets/Logo.svg",
+  canonicalUrl = "https://enviosdosruedas.com"
+} = Astro.props;
+
+const fullTitle = `🚚 ${title} - Envios DosRuedas`;
+---
+
+<!-- Basic Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content={description}>
+<meta name="keywords" content="mensajeria mar del plata, envios mar del plata, mensajería en moto mar del plata, motomensajeria, mdp, cadeteria mar del plata, servicio de mensajeria en moto">
+<meta name="Language" content="es-ar">
+<meta name="Distribution" content="Global">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="9OjDGP-gnfVsatvfLEfTZjWdrynzlI03qJ9faKZddsc">
+<meta name="author" content="Envios DosRuedas">
+<meta name="copyright" content="Envios DosRuedas">
+
+<!-- Geo Meta Tags -->
+<meta name="geo.placename" content="Mar del Plata">
+<meta name="geo.region" content="AR-B">
+<meta name="geo.position" content="-38.0236;-57.5475">
+<meta name="ICBM" content="-38.0236, -57.5475">
+
+<!-- Cache Control -->
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta http-equiv="Pragma" content="no-cache">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content={canonicalUrl}>
+<meta property="og:title" content={fullTitle}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={image}>
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="500">
+<meta property="og:site_name" content="Envios DosRuedas">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content={canonicalUrl}>
+<meta name="twitter:title" content={fullTitle}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={image}>
+
+<!-- Title -->
+<title>{fullTitle}</title>
+
+<!-- Favicons -->
+<link rel="icon" href="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a/favicon/LogoEnviosDosRuedas-(4602)-32.png" sizes="32x32">
+<link rel="icon" href="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a/favicon/LogoEnviosDosRuedas-(4602)-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a/favicon/LogoEnviosDosRuedas-(4602)-180.png" sizes="180x180">
+<meta name="msapplication-TileColor" content="#1a365d">
+<meta name="msapplication-TileImage" content="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a/favicon/LogoEnviosDosRuedas-(4602)-144.png">
+<meta name="theme-color" content="#1a365d">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Envios DosRuedas",
+  "image": "https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a/img/LogoEnviosDosRuedas.webp",
+  "description": "Servicio express de mensajería y delivery en Mar del Plata. Entregas rápidas con seguimiento, moto fija para negocios y soluciones logísticas personalizadas.",
+  "@id": "https://enviosdosruedas.com",
+  "url": "https://enviosdosruedas.com",
+  "telephone": "+542236602699",
+  "priceRange": "desde $2000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11 de Septiembre 3687",
+    "addressLocality": "Mar del Plata",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "B7600",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -38.0236,
+    "longitude": -57.5475
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "19:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/enviosdosruedas/",
+    "https://www.instagram.com/enviosdosruedas/",
+    "https://enviosdosruedas.com/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150"
+  }
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K445BEETCF"></script>
+<script>
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  function gtag() {
+    (window as any).dataLayer.push(arguments);
+  }
+  (window as any).gtag('js', new Date());
+  (window as any).gtag('config', 'G-K445BEETCF');
+</script>

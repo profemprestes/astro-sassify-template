@@ -1,0 +1,140 @@
+---
+import '../styles/global.scss';
+
+// Import FontAwesome for icons
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Import Alpine.js for interactive components
+import 'alpinejs';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { 
+  title, 
+  description = "Servicios de mensajería y delivery en Mar del Plata. Soluciones rápidas, seguras y económicas para todas tus necesidades de envío.", 
+  ogImage = "https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//img/LogoEnviosDosRuedas.webp" 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+  <body class="font-sans antialiased bg-white dark:bg-blue-950 text-blue-900 dark:text-white transition-colors duration-300">
+    <slot />
+    
+    <!-- Back to top button -->
+    <button 
+      id="back-to-top" 
+      class="fixed bottom-6 right-6 p-3 rounded-full bg-amber-400 text-blue-900 shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-300 z-50"
+      aria-label="Back to top"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+    
+    <script>
+      // Back to top button functionality
+      document.addEventListener('astro:page-load', () => {
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        if (backToTopButton) {
+          // Show/hide button based on scroll position
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+              backToTopButton.classList.remove('opacity-0', 'invisible');
+              backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+              backToTopButton.classList.remove('opacity-100', 'visible');
+              backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+          });
+          
+          // Scroll to top when clicked
+          backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+      });
+    </script>
+    
+    <!-- Custom container class -->
+    <style is:global>
+      .container-custom {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      @media (min-width: 640px) {
+        .container-custom {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .container-custom {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      
+      /* Font settings */
+      :root {
+        --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --font-display: 'Montserrat', var(--font-sans);
+      }
+      
+      .font-sans {
+        font-family: var(--font-sans);
+      }
+      
+      .font-display {
+        font-family: var(--font-display);
+      }
+    </style>
+  </body>
+</html>

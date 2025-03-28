@@ -1,0 +1,288 @@
+---
+// FAQ component with categories and accordion functionality
+---
+
+<div class="faq-container">
+  <div class="search-section mb-8">
+    <div class="faq-navigation flex flex-wrap justify-center gap-2 mb-6">
+      <button class="nav-pill active" data-category="todos">
+        Todas
+      </button>
+      <button class="nav-pill" data-category="servicios">
+        Servicios
+      </button>
+      <button class="nav-pill" data-category="precios">
+        Precios
+      </button>
+      <button class="nav-pill" data-category="envios">
+        Proceso de Envío
+      </button>
+    </div>
+    <div class="search-instructions bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg mb-8">
+      <p class="instructions-text text-center text-blue-700 dark:text-blue-200">
+        <i class="fas fa-info-circle mr-2"></i>
+        Puedes buscar por palabra clave o navegar por categorías usando los botones de arriba. Todas las preguntas están organizadas para que encuentres lo que necesitas fácilmente.
+      </p>
+    </div>
+  </div>
+  
+  <section class="faq-section mb-12" id="servicios">
+    <div class="faq-category">
+      <h2 class="category-title text-2xl font-bold text-center mb-8 text-blue-800 dark:text-blue-200">
+        <i class="fas fa-truck-fast mr-2"></i>
+        Sobre los servicios en general
+      </h2>
+      <div class="faq-grid grid gap-4 md:grid-cols-2">
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Qué tipo de envíos realizan?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Transportamos en moto: mandados, trámites, paquetes, delivery y servicios de cadetería
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cuáles son las zonas de cobertura? ¿Cubren toda la ciudad/región?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Cubrimos toda la ciudad, con la excepción de algunas zonas catalogadas como peligrosas por motivos de seguridad.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Realizan entregas a Contrareembolso?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Sí, el efectivo cobrado será rendido en el transcurso del día o al día siguiente.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cuál es el tiempo estimado de entrega? ¿Ofrecen entregas urgentes?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            No trabajamos con urgencias. Solicitamos una anticipación mínima de 2 horas para organizarnos y entregar todo en tiempo y forma. Según el tipo de envío, la entrega se realizará en el horario pactado.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cómo puedo solicitar un servicio de mensajería?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Comunícate por mensaje de WhatsApp al 2236602699 y un operador te responderá a la brevedad.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cuáles son sus horarios de atención/servicio?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Nuestro horario de atención es de lunes a viernes de 8 a 18 hs y sábados de 9 a 15 hs. Consulta por WhatsApp para el servicio de delivery nocturno.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Trabajan con empresas o solo con particulares?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Atendemos empresas, emprendedores y particulares.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Qué los diferencia de otros servicios de mensajería en moto?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Buscamos brindar un servicio de excelente calidad, donde la responsabilidad y la confianza son nuestros principales pilares.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq-section mb-12" id="precios">
+    <div class="faq-category">
+      <h2 class="category-title text-2xl font-bold text-center mb-8 text-blue-800 dark:text-blue-200">
+        <i class="fas fa-money-bill-wave mr-2"></i>
+        Sobre los precios y pagos
+      </h2>
+      <div class="faq-grid grid gap-4 md:grid-cols-2">
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cómo calculan el costo del envío?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            El costo de envío se calcula según la distancia entre el retiro y la entrega, y adicionales que puedan existir (bulto, lluvia, demora, distancia de retiro).
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Cuáles son las formas de pago que aceptan?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Se puede abonar en efectivo o por transferencia.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Emiten factura?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Realizamos factura C.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Ofrecen descuentos para emprendedores o clientes masivos?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Sí, ofrecemos planes especiales para emprendedores y clientes con muchos envíos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq-section" id="envios">
+    <div class="faq-category">
+      <h2 class="category-title text-2xl font-bold text-center mb-8 text-blue-800 dark:text-blue-200">
+        <i class="fas fa-box mr-2"></i>
+        Sobre el proceso de envío
+      </h2>
+      <div class="faq-grid grid gap-4 md:grid-cols-2">
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Qué información necesito proporcionar para solicitar un envío?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Para solicitar un envío necesitamos los siguientes datos: dirección de retiro, dirección de entrega, tamaño del envío, nombre y teléfono de quien recibe.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Puedo modificar la dirección de entrega una vez que el envío está en curso?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Sí, pero dependiendo de la distancia, podría tener un costo adicional.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Qué sucede si el destinatario no está presente en el momento de la entrega?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            El envío será cobrado de igual manera, y se deberá reprogramar la entrega y abonar otro envío.
+          </div>
+        </div>
+        <div class="ss-accordion-tab bg-white dark:bg-blue-900 rounded-lg shadow-md overflow-hidden">
+          <button class="ss-accordion-btn w-full text-left p-4 font-medium flex justify-between items-center">
+            ¿Qué pasa si necesito cancelar un envío? ¿Hay algún cargo?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="content hidden p-4 bg-blue-50/50 dark:bg-blue-800/30 border-t border-blue-100 dark:border-blue-800">
+            Depende del momento de la cancelación y a qué distancia de la entrega o el retiro se encuentre el cadete.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .nav-pill {
+    @apply px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 font-medium transition-colors;
+  }
+  
+  .nav-pill:hover {
+    @apply bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-100;
+  }
+  
+  .nav-pill.active {
+    @apply bg-amber-400 text-blue-900 shadow-md;
+  }
+  
+  .ss-accordion-btn {
+    @apply text-blue-700 dark:text-blue-200 hover:text-amber-500 dark:hover:text-amber-400 transition-colors;
+  }
+  
+  .ss-accordion-tab.active .ss-accordion-btn i {
+    @apply transform rotate-180;
+  }
+  
+  .ss-accordion-tab.active .content {
+    @apply block;
+  }
+</style>
+
+<script>
+  // Initialize accordion functionality
+  document.addEventListener('astro:page-load', () => {
+    const accordionButtons = document.querySelectorAll('.ss-accordion-btn');
+    const categoryButtons = document.querySelectorAll('.nav-pill');
+    const faqSections = document.querySelectorAll('.faq-section');
+    
+    // Toggle accordion items
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const accordionTab = button.parentElement;
+        const isActive = accordionTab.classList.contains('active');
+        
+        // Close all tabs
+        document.querySelectorAll('.ss-accordion-tab').forEach(tab => {
+          tab.classList.remove('active');
+          const content = tab.querySelector('.content');
+          content.style.maxHeight = null;
+          content.classList.add('hidden');
+        });
+        
+        // If the clicked tab wasn't active, open it
+        if (!isActive) {
+          accordionTab.classList.add('active');
+          const content = accordionTab.querySelector('.content');
+          content.classList.remove('hidden');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+    
+    // Category filtering
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        
+        // Update active button
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Show/hide sections based on category
+        if (category === 'todos') {
+          faqSections.forEach(section => section.style.display = 'block');
+        } else {
+          faqSections.forEach(section => {
+            if (section.id === category) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+  });
+</script>
