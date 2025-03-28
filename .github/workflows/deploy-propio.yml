@@ -41,7 +41,7 @@ jobs:
           import alpinejs from '@astrojs/alpinejs';
 
           export default defineConfig({
-            site: 'https://profemprestes.github.io',
+            site: 'https://profemprestes.github.io/astro-sassify-template',
             base: '/astro-sassify-template',
             integrations: [
               tailwind(),
