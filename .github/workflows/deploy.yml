@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   # Activa el flujo de trabajo cada vez que haces push a la rama `main`
   push:
-    branches: [ main ]
+    branches: [ propio ]
   # Permite ejecutar este flujo de trabajo manualmente desde la pestaña Actions en GitHub
   workflow_dispatch:
 
