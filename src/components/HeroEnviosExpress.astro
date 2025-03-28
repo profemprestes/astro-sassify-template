@@ -1,0 +1,138 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  imageUrl?: string;
+}
+
+const { 
+  title = "Mensajería Envíos Express", 
+  subtitle = "Servicio de mensajería rápida y segura en la ciudad. Entregamos tus paquetes en tiempo récord con nuestro servicio express.",
+  imageUrl = "../assets/img/envios-express.png"
+} = Astro.props;
+---
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+  <!-- Simplified background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 dark:from-blue-800 dark:to-blue-900 z-0"></div>
+  
+  <!-- Single company name header -->
+  <div class="text-center mb-8 fade-in">
+    <h2 class="text-2xl font-bold text-white tracking-wider">
+      MENSAJERÍA ENVÍOS EXPRESS
+    </h2>
+    <div class="w-24 h-1 bg-amber-400 mx-auto mt-2 animate-expand-line"></div>
+  </div>
+
+  <div class="container-custom relative z-10">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+      <div class="text-center md:text-left md:w-1/2 fade-in">
+        <!-- Main title -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white slide-up">
+          {title}
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-xl text-blue-100 dark:text-blue-200 mb-8 max-w-lg mx-auto md:mx-0 slide-up" style="animation-delay: 200ms;">
+          {subtitle}
+        </p>
+        
+        <!-- WhatsApp CTA Button -->
+        <div class="slide-up" style="animation-delay: 300ms;">
+          <a 
+            href="https://wa.me/+542236602699" 
+            class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all shadow-lg hover:shadow-xl"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-6.29-3.62c.545-1.6 2.56-2.954 2.56-2.954.089-.05.178-.025.272.025.272.149 1.06.644 1.24.768.18.124.27.074.322-.025.06-.112.244-.694.3-.954.06-.26.03-.37-.164-.446-.164-.074-.92-.198-1.26-.223-.26-.018-.405-.05-.554.074-.15.124-.594.644-.733.768-.14.124-.27.174-.495.1-.223-.075-.94-.347-1.79-1.108-1.5-1.337-1.515-1.892-1.69-1.992-.164-.09-.297-.06-.38-.037-.26.074-.43.26-.495.397-.09.198-.3.669-.3.669s-1.515 3.63-1.62 3.885c-.09.26-.14.57-.04.855.105.285.644 1.815 1.365 2.89.9 1.338 1.365 1.858 2.475 2.858 1.11 1 1.755 1.273 2.46 1.633.705.36 1.125.29 1.53.223.405-.066 1.305-.495 1.485-1.005.18-.51.18-.945.126-1.042-.045-.097-.165-.158-.345-.248"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+      
+      <!-- Image section -->
+      <div class="md:w-1/2 relative fade-in" style="animation-delay: 300ms;">
+        <div class="relative z-10 floating-element">
+          <img 
+            src={imageUrl} 
+            alt="Mensajería Express" 
+            class="max-w-full h-auto rounded-xl shadow-2xl border-4 border-white"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Wave divider -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 text-white">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.11,130.83,141.14,214.86,115.68,271.88,97.11,312.83,67.78,321.39,56.44Z" class="fill-current"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  /* Floating animation */
+  .floating-element {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Expanding line animation */
+  @keyframes expand-line {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+  
+  .animate-expand-line {
+    animation: expand-line 1.5s ease-out forwards;
+  }
+  
+  /* Horizontal bounce animation */
+  @keyframes bounce-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+  
+  .animate-bounce-x {
+    animation: bounce-x 1s infinite;
+  }
+  
+  /* Slow pulse animation */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 4s infinite;
+  }
+  
+  /* Slide up animation */
+  @keyframes slide-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  /* Fade in animation */
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+</style>

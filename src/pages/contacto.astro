@@ -3,4 +3,85 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ContactForm from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
 ---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <HeroSection 
+      title="Contacto Directo" 
+      subtitle="Comunicate con nuestro equipo"
+      backgroundImage="/images/contact-bg.jpg"
+    />
+
+    <!-- Contact Info Section -->
+    <section class="py-12 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <!-- Left Column -->
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-blue-800 dark:text-blue-400 mb-4">
+              Envíos DosRuedas
+            </h2>
+            <h3 class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+              Mensajería y Delivery
+            </h3>
+            <p class="text-gray-700 dark:text-gray-400 mb-6">
+              Comunicate exclusivamente por mensaje de WhatsApp
+            </p>
+            
+            <!-- Contact Methods -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
+                  <i class="fas fa-phone text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-gray-200">Teléfono</h4>
+                  <a href="tel:+542236602699" class="text-blue-600 dark:text-blue-400 hover:underline">
+                    223-660-2699
+                  </a>
+                </div>
+              </div>
+              <!-- ... other contact methods ... -->
+            </div>
+          </div>
+
+          <!-- Right Column - WhatsApp CTA -->
+          <div class="md:w-1/2 flex flex-col items-center justify-center">
+            <div class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md w-full max-w-md text-center">
+              <a href="https://wa.me/+542236602699" class="flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>Enviar Mensaje por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <ContactForm />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* Global styles for the contact page */
+  body {
+    background-color: #f8fafc;
+  }
+  
+  .dark body {
+    background-color: #1a202c;
+  }
+  
+  /* Smooth transitions for dark mode */
+  section, .contact-card {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+</style>

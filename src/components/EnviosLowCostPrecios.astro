@@ -2,92 +2,48 @@
 const plans = [
   {
     name: "Hasta 3 Km",
-    price: "2500",
+    price: "2000",
     features: [
-      "Entrega Rapidas y Efectivas",
+      "Solicitado antes 13hs",
       "Servicio Express",
       "Pueden existir adicionales",
     ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%202.9km%20%F0%9F%9A%9D",
+    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B%2C%20Necesito%20un%20envio%20de%20una%20distancia%20menor%20a%203km%20LowCost%20%F0%9F%9B%B5",
     priceUnit: "por envío"
   },
   {
     name: "Hasta 5 Km",
-    price: "3100",
+    price: "2700",
     features: [
-      "Entrega Rapidas y Efectivas",
+      "Solicitado antes 13hs",
       "Servicio Express",
       "Pueden existir adicionales",
     ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%205km%20%F0%9F%9A%9D",
+    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B%2C%20Necesito%20un%20envio%20de%20una%20distancia%20menor%20a%205km%20LowCost%20%F0%9F%9B%B5",
     priceUnit: "por envío"
   },
   {
-    name: "De 5 a 6 km",
-    price: "3900",
+    name: "De 5 a 9 Km",
+    price: "3800",
     features: [
-      "Entrega Rapidas y Efectivas",
+      "Solicitado antes 13hs",
       "Servicio Express",
       "Pueden existir adicionales",
     ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%206km%20%F0%9F%9A%9D",
+    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B%2C%20Necesito%20un%20envio%20de%20una%20distancia%20menor%20a%209km%20LowCost%20%F0%9F%9B%B5",
     priceUnit: "por envío"
   },
   {
-    name: "De 6 a 7 km",
-    price: "4600",
-    features: [
-      "Entrega Rapidas y Efectivas",
-      "Servicio Express",
-      "Pueden existir adicionales",
-    ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%207km%20%F0%9F%9A%9D",
-    priceUnit: "por envío"
-  },
-  {
-    name: "De 7 a 8 km",
+    name: "De 9 a 13 Km",
     price: "5400",
     features: [
-      "Entrega Rapidas y Efectivas",
-      "Servicio Express",
+      "Solicitado antes 13hs",
+      "Servicio Low-Cost",
       "Pueden existir adicionales",
     ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%208km%20%F0%9F%9A%9D",
+    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B%2C%20Necesito%20un%20envio%20de%20una%20distancia%20menor%20a%2013km%20LowCost%20%F0%9F%9B%B5",
     priceUnit: "por envío"
-  },
-  {
-    name: "De 8 a 9 km",
-    price: "6000",
-    features: [
-      "Entrega Rapidas y Efectivas",
-      "Servicio Express",
-      "Pueden existir adicionales",
-    ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%209km%20%F0%9F%9A%9D",
-    priceUnit: "por envío"
-  },
-  {
-    name: "De 9 a 10 km",
-    price: "6850",
-    features: [
-      "Entrega Rapidas y Efectivas",
-      "Servicio Express",
-      "Pueden existir adicionales",
-    ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20menor%20a%2010km%20%F0%9F%9A%9D",
-    priceUnit: "por envío"
-  },
-  {
-    name: "+10 km",
-    price: "700",
-    features: [
-      "Entrega Rapidas y Efectivas",
-      "Servicio Express",
-      "Consultar por WhatsApp",
-    ],
-    whatsappLink: "https://wa.me/+542236602699?text=Hola%20%F0%9F%91%8B,%20Necesito%20un%20envio%20Express%20de%20una%20distancia%20mayor%20a%2010km%20%F0%9F%9A%9D",
-    priceUnit: "por km adicional"
-  },
+  }
 ];
 ---
 
@@ -95,11 +51,11 @@ const plans = [
   <div class="container-custom">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-white font-medium text-sm mb-4 shadow-md hover:shadow-lg transition-shadow">
-        Precios Express
+        Precios LowCost
       </span>
       <h2 class="mb-6 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-amber-400 dark:to-yellow-300">
-          Servicio de Envíos Express
+          Servicio de Envíos LowCost
         </span>
       </h2>
       <p class="text-lg text-gray-600 dark:text-gray-300">

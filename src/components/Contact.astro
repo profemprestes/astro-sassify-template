@@ -1,7 +1,10 @@
 ---
+// Remove the outer section since it's now in contacto.astro
 ---
-<section id="contacto" class="py-16 bg-gradient-to-b from-white to-blue-50 dark:from-secondary-950 dark:to-blue-950">
-  <div class="container-custom">
+
+<!-- Contact Cards -->
+<div class="py-16 bg-gradient-to-b from-white to-blue-50 dark:from-secondary-950 dark:to-blue-950">
+  <div class="container mx-auto px-4">
     <!-- Section Header -->
     <div class="text-center mb-12">
       <span class="inline-block text-amber-500 dark:text-amber-400 text-sm font-semibold tracking-wider uppercase mb-2">Contacto Directo</span>
@@ -13,7 +16,7 @@
       </div>
     </div>
 
-    <!-- Contact Cards -->
+    <!-- Rest of the existing contact cards and form content remains the same -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
       <!-- WhatsApp Card -->
       <div class="bg-white dark:bg-blue-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
@@ -252,13 +255,12 @@
 </section>
 
 <style>
-  /* Animation for the cards */
+  /* Keep existing animations and styles */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
   
-  /* Pulse animation for icons */
   @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -270,15 +272,12 @@
 </style>
 
 <script>
-  // Form submission handling
+  // Keep existing form handling
   document.addEventListener('astro:page-load', () => {
     const form = document.querySelector('form');
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Here you would typically send the form data to your backend
-        // For now, let's just show a success message
         alert('¡Gracias por tu mensaje! Te responderemos a la brevedad.');
         form.reset();
       });

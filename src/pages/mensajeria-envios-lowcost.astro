@@ -1,6 +1,22 @@
 ---
-layout: '../layouts/Layout.astro'
-title: 'Envíos LowCost'
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import EnviosLowCostPrecios from '../components/EnviosLowCostPrecios.astro';
+import Footer from '../components/Footer.astro';
+import HeroEnviosLowCost from '../components/HeroEnviosLowCost.astro';
+import ContactForm from '../components/Contact.astro';
 ---
 
-<h1>Envíos LowCost</h1>
+<Layout title="Mensajería Envíos LowCost">
+  <Header />
+  <main>
+    <HeroEnviosLowCost 
+      title="Mensajería LowCost"
+      subtitle="Servicio rápido y confiable para tus envíos urgentes"
+      imageUrl="/images/envios-LowCost-hero.jpg"
+    />
+    <EnviosLowCostPrecios />
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout>

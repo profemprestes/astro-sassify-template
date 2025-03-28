@@ -1,6 +1,22 @@
 ---
-layout: '../layouts/Layout.astro'
-title: 'Envíos Express'
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import EnviosExpressPrecios from '../components/EnviosExpressPrecios.astro';
+import Footer from '../components/Footer.astro';
+import HeroEnviosExpress from '../components/HeroEnviosExpress.astro';
+import ContactForm from '../components/Contact.astro';
 ---
 
-<h1>Envíos Express</h1>
+<Layout title="Mensajería Envíos Express">
+  <Header />
+  <main>
+    <HeroEnviosExpress 
+      title="Mensajería Express"
+      subtitle="Servicio rápido y confiable para tus envíos urgentes"
+      imageUrl="/images/envios-express-hero.jpg"
+    />
+    <EnviosExpressPrecios />
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout>
