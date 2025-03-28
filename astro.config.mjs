@@ -5,7 +5,7 @@ import alpinejs from '@astrojs/alpinejs';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://profemprestes.github.io',
-  base: '/astro-sassify-template',  // Note: removed trailing slash
+  base: '/astro-sassify-template',  // Sin barra al final
   integrations: [tailwind(), alpinejs()],
   output: 'static',
   build: {
