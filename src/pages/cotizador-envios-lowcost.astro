@@ -1,6 +1,45 @@
 ---
-layout: '../layouts/Layout.astro'
-title: 'Cotizar LowCost'
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import EnviosLowCostCotizador from '../components/EnviosLowCostCotizador.astro';
+import Footer from '../components/Footer.astro';
+import Socialbanner from '../components/socialbanner.astro';
+import HeroEnviosLowCostCotizador from '../components/HeroEnviosLowCostCotizador.astro';
 ---
 
-<h1>Cotizar LowCost</h1>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOTIWiQtyy8VWFUGIIBQBAOdebhXzL7IE"></script>
+
+<Layout title="Mensajería Envíos LowCost">
+  <Header />
+  <main class="bg-gray-50 dark:bg-gray-900">
+    <HeroEnviosLowCostCotizador 
+      title="Cotizador de Envíos LowCost"
+      highlightText="LowCost"
+      description="Calculá el precio de tu envío al instante con nuestro cotizador online"
+    />
+    
+    <div class="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto">
+        <EnviosLowCostCotizador />
+      </div>
+    </div>
+    <Socialbanner />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  :root {
+    --color-primary-100: #e6f0ff;
+    --color-primary-500: #084298;
+    --color-accent-500: #0d6efd;
+  }
+  
+  .container {
+    scroll-margin-top: 100px;
+  }
+  
+  main {
+    transition: background-color 0.3s ease;
+  }
+</style>

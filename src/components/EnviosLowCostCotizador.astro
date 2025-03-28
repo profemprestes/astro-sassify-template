@@ -1,0 +1,267 @@
+<div class="container" style="max-width: 800px; margin: 0 auto; padding: 30px; font-family: 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; border-radius: 16px;" data-ss-id="Tcsw7y7rA1gWCBYXOVEN6" data-ss-padding="" data-ss-border="">
+  <form style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); margin-bottom: 30px; transition: all 0.3s ease; border: 1px solid rgba(8, 66, 152, 0.1);" data-ss-id="5p3ezwLqoQBRYonp09Dht" data-ss-padding="" data-ss-border="">
+      <div class="form-group" style="margin-bottom: 20px;" data-ss-id="IZbrEOAgRWqDI7Mq3RRLC" data-ss-padding="" data-ss-border="">
+          <label for="direccion-retiro" style="display: block; font-weight: 600; margin-bottom: 10px; color: #084298; font-size: 15px;" data-ss-id="7iRIL-dlrJU7pE7B5Fjq2" data-ss-padding="" data-ss-border="">
+              Dirección de Retiro:
+          </label>
+          <input id="direccion-retiro" type="text" placeholder="Ej: Av. Colón 1234" style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; transition: all 0.3s ease;" name="Mi campo" data-ss-id="1llI-be_IBQnlKAWSB96z" data-ss-padding="" data-ss-border="">
+          <div class="input-focus" style="height: 2px; background: #084298; width: 0; transition: width 0.3s ease;"></div>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;" data-ss-id="u0ZnyBdm03yOh4EiETATA" data-ss-padding="" data-ss-border="">
+          <label for="direccion-entrega" style="display: block; font-weight: 600; margin-bottom: 8px; color: #084298;" data-ss-id="YjMF4fVfR_SuFqW2B2o3D" data-ss-padding="" data-ss-border="">
+              Dirección de Entrega:
+          </label>
+          <input id="direccion-entrega" type="text" placeholder="Ej: Av. Libertad 4567" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;" name="Mi campo_1" data-ss-id="goEMwm1vQG_9cMxVpFMVs" data-ss-padding="" data-ss-border="">
+      </div>
+      <button type="button" id="boton-cotizar" style="width: 100%; padding: 16px; background: linear-gradient(to right, #084298, #0d6efd); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(8, 66, 152, 0.2);" data-ss-id="YPCasMhFuPKORpClk5pY3" data-ss-padding="" data-ss-border="">
+          <span style="display: inline-block; transition: transform 0.3s ease;">Cotizar Envío</span>
+      </button>
+          Cotizar
+      </button>
+      <div id="cargando" style="display:none; text-align: center; margin-top: 20px; color: #084298;" data-ss-id="9XogxQgaLk_3oAhobMqde" data-ss-padding="" data-ss-border="">
+          <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #084298; border-radius: 50%; width: 40px; height: 40px; margin: 0 auto; animation: spin 1s linear infinite;" data-ss-id="b4E8jnpiFfzgBRnUiSuej" data-ss-padding="" data-ss-border=""></div>
+          Calculando...
+      </div>
+  </form>
+  <div id="resultado" style="display: none; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); margin-bottom: 30px; border: 1px solid rgba(8, 66, 152, 0.1); animation: fadeIn 0.5s ease;" data-ss-id="qQO2g386vJlHcjLB0yHmW" data-ss-padding="" data-ss-border="">
+      <p id="distancia" style="font-size: 18px; color: #084298; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px;" data-ss-id="272KOOfW1IhxifYY04PUc" data-ss-padding="" data-ss-border="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+              <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#084298"/>
+          </svg>
+          <span id="distancia-text"></span>
+      </p>
+      <p id="precio" style="font-size: 26px; color: #084298; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px;" data-ss-id="sIJcgSHSoe193JsdKG856" data-ss-padding="" data-ss-border="">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 17C11.45 17 11 16.55 11 16V12C11 11.45 11.45 11 12 11C12.55 11 13 11.45 13 12V16C13 16.55 12.55 17 12 17ZM13 9H11V7H13V9Z" fill="#084298"/>
+          </svg>
+          <span id="precio-text"></span>
+      </p>
+      <p style="color: #666; font-size: 14px; line-height: 1.5;" data-ss-id="BdEb1jGvIgOcU7biR7Jw0" data-ss-padding="" data-ss-border="">
+          Los valores son aproximados. Pueden existir adicionales (Distancia retiro, bulto, demora, lluvia, etc) Para un valor exacto comunicarse por whatsapp al
+          <a href="tel:2236602699" style="color: #084298; text-decoration: none;" data-ss-id="vPIPz28zjgjgttg2YwAW-">223-660-2699
+          </a>
+      </p>
+  </div>
+  <div id="mapa" style="height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 1px solid rgba(8, 66, 152, 0.1);" data-ss-id="_TC-BltuZHe-yIJzTmZTO" data-ss-padding="" data-ss-border=""></div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize" async defer></script>
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    
+    .container {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    form {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    form:hover {
+        box-shadow: 0 10px 35px rgba(8, 66, 152, 0.15) !important;
+        transform: translateY(-2px);
+    }
+    
+    #boton-cotizar {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    #boton-cotizar:hover {
+        box-shadow: 0 6px 20px rgba(8, 66, 152, 0.3) !important;
+        transform: translateY(-2px);
+    }
+    
+    #boton-cotizar:hover span {
+        transform: translateX(5px);
+    }
+    
+    #boton-cotizar:active {
+        transform: translateY(0) !important;
+        box-shadow: 0 2px 10px rgba(8, 66, 152, 0.3) !important;
+    }
+    
+    input {
+        transition: all 0.3s ease;
+    }
+    
+    input:focus {
+        border-color: #084298 !important;
+        box-shadow: 0 0 0 3px rgba(8, 66, 152, 0.15) !important;
+        outline: none;
+    }
+    
+    .form-group:hover .input-focus {
+        width: 100%;
+    }
+    
+    .spinner {
+        animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    }
+    
+    #resultado {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    #mapa {
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    #mapa:hover {
+        box-shadow: 0 10px 35px rgba(8, 66, 152, 0.15) !important;
+    }
+</style>
+<script data-ss-id="WcAGyI43AVBV7ERo49P75" data-ss-padding="" data-ss-border="">
+  var service = new google.maps.DistanceMatrixService();
+  var mapa = null;
+  var marcadorOrigen = null;
+  var marcadorDestino = null;
+
+  function initialize() {
+      mapa = new google.maps.Map(document.getElementById('mapa'), {
+          center: { lat: -38.002751, lng: -57.557889 }, // Mar del Plata
+          zoom: 12
+      });
+  }
+
+  function getCoords(direccion, callback) {
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({ address: direccion }, function (results, status) {
+          if (status === 'OK') {
+              var lat = results[0].geometry.location.lat();
+              var lng = results[0].geometry.location.lng();
+              callback({ lat: lat, lng: lng });
+          } else {
+              console.log('Error al obtener coordenadas: ' + status);
+          }
+      });
+  }
+
+  function calculateDistance() {
+      var origen = document.getElementById("direccion-retiro").value + ", Mar del Plata";
+      var destino = document.getElementById("direccion-entrega").value + ", Mar del Plata";
+
+      if (origen && destino) {
+          document.getElementById("cargando").style.display = "block";
+
+          getCoords(origen, function (coordsOrigen) {
+              getCoords(destino, function (coordsDestino) {
+                  service.getDistanceMatrix({
+                      origins: [coordsOrigen],
+                      destinations: [coordsDestino],
+                      travelMode: google.maps.TravelMode.DRIVING,
+                      avoidHighways: false,
+                      avoidTolls: false,
+                      unitSystem: google.maps.UnitSystem.METRIC
+                  }, function (response, status) {
+                      if (status === 'OK') {
+                          callback(response, status, coordsOrigen, coordsDestino);
+                      } else {
+                          document.getElementById("precio").innerText = "Error al calcular la distancia";
+                          document.getElementById("cargando").style.display = "none";
+                          console.error('Error al calcular distancia:', status);
+                      }
+                  });
+              });
+          });
+      } else {
+          alert("Por favor, ingrese ambas direcciones.");
+      }
+  }
+
+  function callback(response, status, origen, destino) {
+      var distancia = document.getElementById("distancia"),
+          precio = document.getElementById("precio"),
+          cargando = document.getElementById("cargando"),
+          resultado = document.getElementById("resultado");
+
+      if (status == "OK" && response.rows[0].elements[0].status == "OK") {
+          var distanciaValor = response.rows[0].elements[0].distance.value / 1000;
+          distancia.innerText = "Distancia: " + distanciaValor.toFixed(2) + " km";
+          var precioValor;
+
+          if (distanciaValor <= 2.9) {
+                    precioValor = 2000;
+                } else if (distanciaValor> 2.9 && distanciaValor <= 4.9) {
+                    precioValor = 2700;
+                } else if (distanciaValor> 4.9 && distanciaValor <= 8.9) {
+                    precioValor = 3800;
+                } else if (distanciaValor> 8.9 && distanciaValor <= 13) {
+                    precioValor = 5400;
+                } else if (distanciaValor> 13 && distanciaValor <= 15) {
+                    precioValor = 7600;
+                } else if (distanciaValor> 15 && distanciaValor <= 17) {
+                    precioValor = 7600;
+                } else if (distanciaValor> 17 && distanciaValor <= 19) {
+                    precioValor = 9500;
+                } else if (distanciaValor> 19 && distanciaValor <= 21) {
+                    precioValor = 9500;
+                } else {
+                    precioValor = "Consulte por WhatsApp";
+                }
+
+          precio.innerText = "Precio: $" + (precioValor);
+          resultado.style.display = "block";
+
+          agregarMarcadores(origen, destino);
+      } else {
+          precio.innerText = "Error: " + status;
+      }
+      cargando.style.display = "none";
+  }
+
+  function agregarMarcadores(origen, destino) {
+      if (marcadorOrigen) marcadorOrigen.setMap(null);
+      marcadorOrigen = new google.maps.Marker({
+          position: origen,
+          map: mapa,
+          title: 'Origen'
+      });
+
+      if (marcadorDestino) marcadorDestino.setMap(null);
+      marcadorDestino = new google.maps.Marker({
+          position: destino,
+          map: mapa,
+          title: 'Destino'
+      });
+
+      var polyline = new google.maps.Polyline({
+          path: [origen, destino],
+          map: mapa,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+      });
+  }
+
+  window.addEventListener('load', initialize);
+
+  document.getElementById("direccion-retiro").addEventListener("change", function () {
+      var direccion = document.getElementById("direccion-retiro").value + ", Mar del Plata";
+      getCoords(direccion, function (coords) {
+          mapa.setCenter(coords);
+          mapa.setZoom(15);
+      });
+  });
+
+  document.getElementById("direccion-entrega").addEventListener("change", function () {
+      var direccion = document.getElementById("direccion-entrega").value + ", Mar del Plata";
+      getCoords(direccion, function (coords) {
+          mapa.setCenter(coords);
+          mapa.setZoom(15);
+      });
+  });
+
+  document.getElementById("boton-cotizar").addEventListener("click", calculateDistance);
+</script>

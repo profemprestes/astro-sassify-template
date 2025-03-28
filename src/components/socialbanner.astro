@@ -5,37 +5,37 @@
 <section class="social-banner bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-800 dark:to-blue-900 py-6 overflow-hidden relative">
   <!-- Animated background elements -->
   <div class="absolute inset-0 overflow-hidden">
-    <div class="social-particles"></div>
+    <div class="social-particles dark:opacity-50"></div>
   </div>
   
   <div class="container-custom relative z-10">
     <div class="social-carousel flex flex-wrap md:flex-nowrap justify-center items-center gap-6 md:gap-10">
       <!-- Instagram -->
       <a href="https://www.instagram.com/enviosdosruedas/" target="_blank" rel="noopener noreferrer" 
-         class="social-item instagram group flex items-center gap-3 bg-white/10 hover:bg-white/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-        <div class="social-icon-wrapper bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-full">
+         class="social-item instagram group flex items-center gap-3 bg-white/10 hover:bg-white/20 dark:bg-black/10 dark:hover:bg-black/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+        <div class="social-icon-wrapper bg-gradient-to-br from-purple-500 to-pink-500 dark:from-purple-600 dark:to-pink-600 p-2 rounded-full">
           <i class="fab fa-instagram text-white text-xl"></i>
         </div>
-        <span class="text-white font-medium group-hover:underline">¡Síguenos en Instagram!</span>
+        <span class="text-white dark:text-gray-100 font-medium group-hover:underline">¡Síguenos en Instagram!</span>
       </a>
       
       <!-- Facebook -->
       <a href="https://www.facebook.com/enviosdosruedas" target="_blank" rel="noopener noreferrer"
-         class="social-item facebook group flex items-center gap-3 bg-white/10 hover:bg-white/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-        <div class="social-icon-wrapper bg-gradient-to-br from-blue-600 to-blue-800 p-2 rounded-full">
+         class="social-item facebook group flex items-center gap-3 bg-white/10 hover:bg-white/20 dark:bg-black/10 dark:hover:bg-black/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+        <div class="social-icon-wrapper bg-gradient-to-br from-blue-600 to-blue-800 dark:from-blue-700 dark:to-blue-900 p-2 rounded-full">
           <i class="fab fa-facebook-f text-white text-xl"></i>
         </div>
-        <span class="text-white font-medium group-hover:underline">¡Visítanos en Facebook!</span>
+        <span class="text-white dark:text-gray-100 font-medium group-hover:underline">¡Visítanos en Facebook!</span>
       </a>
       
       <!-- WhatsApp -->
       <a href="https://wa.me/+542236602699?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Encontr%C3%A9%20su%20contacto%20en%20el%20sitio%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20mensajer%C3%ADa%20%F0%9F%93%A6%20y%20delivery%20%F0%9F%9B%B5.%20%C2%A1Gracias%21" 
          target="_blank" rel="noopener noreferrer"
-         class="social-item whatsapp group flex items-center gap-3 bg-white/10 hover:bg-white/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-        <div class="social-icon-wrapper bg-gradient-to-br from-green-400 to-green-600 p-2 rounded-full">
+         class="social-item whatsapp group flex items-center gap-3 bg-white/10 hover:bg-white/20 dark:bg-black/10 dark:hover:bg-black/20 px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+        <div class="social-icon-wrapper bg-gradient-to-br from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 p-2 rounded-full">
           <i class="fab fa-whatsapp text-white text-xl"></i>
         </div>
-        <span class="text-white font-medium group-hover:underline">WhatsApp: 2236602699</span>
+        <span class="text-white dark:text-gray-100 font-medium group-hover:underline">WhatsApp: 2236602699</span>
       </a>
     </div>
   </div>
@@ -54,6 +54,12 @@
       radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-size: 40px 40px;
     animation: particles-animation 20s linear infinite;
+  }
+
+  .dark .social-particles {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   }
   
   @keyframes particles-animation {

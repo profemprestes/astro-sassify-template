@@ -1,0 +1,118 @@
+---
+interface Props {
+  title: string;
+  highlightText?: string;
+  description: string;
+}
+
+const { title, highlightText, description } = Astro.props;
+
+// Split the title to insert the highlighted text if provided
+let titleStart = title;
+let titleEnd = "";
+
+if (highlightText) {
+  const titleParts = title.split(highlightText);
+  if (titleParts.length > 1) {
+    titleStart = titleParts[0];
+    titleEnd = titleParts[1];
+  }
+}
+---
+
+<style is:global>
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 8px rgba(255,255,255,0.3);
+    }
+    50% {
+      text-shadow: 0 0 16px rgba(255,255,255,0.5);
+    }
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="hero-gradient relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-20 transition-all duration-500 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-800 dark:via-blue-900 dark:to-blue-950 bg-[length:400%_400%] animate-gradientFlow">
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-grid-pattern opacity-30 animate-pulse-slow"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-secondary-950"></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IGlkPSJwYXR0ZXJuLWJnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ0cmFuc3BhcmVudCI+PC9yZWN0PjxyZWN0IGlkPSJwYXR0ZXJuLWZvcmVncm91bmQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiPjwvcmVjdD48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiPjwvcmVjdD48L3N2Zz4=')] opacity-10"></div>
+  </div>
+  
+  <div class="container-custom relative z-10">
+    <div class="text-center max-w-3xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 text-gray-900 dark:text-white animate-slide-down hover:[&>span]:animate-float">
+        {highlightText ? (
+          <>
+            {titleStart}<span class="text-accent-500 font-bold tracking-wide animate-pulse hover:text-accent-600 transition-colors duration-300 animate-textGlow">{highlightText}</span>{titleEnd}
+          </>
+        ) : (
+          <span class="animate-textGlow">{title}</span>
+        )}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up transition-all duration-300 hover:text-gray-800 dark:hover:text-gray-200 hover:animate-textGlow" style="animation-delay: 200ms">
+        {description}
+      </p>
+    </div>
+  </div>
+  
+  <!-- Animated Shapes -->
+  <div class="absolute -bottom-16 left-0 right-0 flex justify-center gap-4">
+    <div class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulseGlow mix-blend-multiply dark:mix-blend-screen"></div>
+    <div class="w-32 md:w-40 h-32 md:h-40 bg-blue-400 rounded-full filter blur-3xl opacity-15 animate-pulseGlow mix-blend-multiply dark:mix-blend-screen" style="animation-delay: 0.5s"></div>
+  </div>
+</section>

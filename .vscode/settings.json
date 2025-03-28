@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "astro-build.astro-vscode",
   "editor.tabSize": 2,
   "files.associations": {
     "*.astro": "astro"
@@ -14,5 +14,14 @@
   "tailwindCSS.emmetCompletions": true,
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./src",
+    "-p",
+    "*test.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true
 }
