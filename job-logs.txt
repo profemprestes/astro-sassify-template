@@ -1,0 +1,271 @@
+﻿2025-03-28T19:43:39.6930202Z Current runner version: '2.323.0'
+2025-03-28T19:43:39.6964081Z ##[group]Operating System
+2025-03-28T19:43:39.6965193Z Ubuntu
+2025-03-28T19:43:39.6965929Z 24.04.2
+2025-03-28T19:43:39.6966785Z LTS
+2025-03-28T19:43:39.6967438Z ##[endgroup]
+2025-03-28T19:43:39.6968232Z ##[group]Runner Image
+2025-03-28T19:43:39.6969291Z Image: ubuntu-24.04
+2025-03-28T19:43:39.6970069Z Version: 20250323.1.0
+2025-03-28T19:43:39.6971736Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250323.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-03-28T19:43:39.6974396Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250323.1
+2025-03-28T19:43:39.6975925Z ##[endgroup]
+2025-03-28T19:43:39.6976662Z ##[group]Runner Image Provisioner
+2025-03-28T19:43:39.6977699Z 2.0.422.1
+2025-03-28T19:43:39.6978470Z ##[endgroup]
+2025-03-28T19:43:39.6980069Z ##[group]GITHUB_TOKEN Permissions
+2025-03-28T19:43:39.6982869Z Contents: read
+2025-03-28T19:43:39.6983666Z Metadata: read
+2025-03-28T19:43:39.6984771Z Pages: write
+2025-03-28T19:43:39.6985652Z ##[endgroup]
+2025-03-28T19:43:39.6988551Z Secret source: Actions
+2025-03-28T19:43:39.6989564Z Prepare workflow directory
+2025-03-28T19:43:39.7440237Z Prepare all required actions
+2025-03-28T19:43:39.7496045Z Getting action download info
+2025-03-28T19:43:40.1460873Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-03-28T19:43:40.1461889Z Version: 4.2.2
+2025-03-28T19:43:40.1463095Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-03-28T19:43:40.1464306Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-03-28T19:43:40.1464981Z ##[endgroup]
+2025-03-28T19:43:40.2369901Z ##[group]Download immutable action package 'actions/upload-pages-artifact@v3'
+2025-03-28T19:43:40.2370757Z Version: 3.0.1
+2025-03-28T19:43:40.2371456Z Digest: sha256:aa65de5e734350e024ca30fe125144b6260e68160e01349fc79f7e321ec35490
+2025-03-28T19:43:40.2372786Z Source commit SHA: 56afc609e74202658d3ffba0e8f6dda462b719fa
+2025-03-28T19:43:40.2373498Z ##[endgroup]
+2025-03-28T19:43:40.4925292Z Getting action download info
+2025-03-28T19:43:40.5975860Z ##[group]Download immutable action package 'actions/upload-artifact@v4'
+2025-03-28T19:43:40.5976633Z Version: 4.6.2
+2025-03-28T19:43:40.5977262Z Digest: sha256:290722aa3281d5caf23d0acdc3dbeb3424786a1a01a9cc97e72f147225e37c38
+2025-03-28T19:43:40.5978124Z Source commit SHA: ea165f8d65b6e75b540449e92b4886f43607fa02
+2025-03-28T19:43:40.5978717Z ##[endgroup]
+2025-03-28T19:43:40.8971535Z Complete job name: build
+2025-03-28T19:43:40.9635159Z ##[group]Run actions/checkout@v4
+2025-03-28T19:43:40.9636014Z with:
+2025-03-28T19:43:40.9636378Z   ref: propio
+2025-03-28T19:43:40.9636766Z   submodules: recursive
+2025-03-28T19:43:40.9637252Z   repository: profemprestes/astro-sassify-template
+2025-03-28T19:43:40.9637983Z   token: ***
+2025-03-28T19:43:40.9638345Z   ssh-strict: true
+2025-03-28T19:43:40.9638712Z   ssh-user: git
+2025-03-28T19:43:40.9639093Z   persist-credentials: true
+2025-03-28T19:43:40.9639525Z   clean: true
+2025-03-28T19:43:40.9639935Z   sparse-checkout-cone-mode: true
+2025-03-28T19:43:40.9640391Z   fetch-depth: 1
+2025-03-28T19:43:40.9640768Z   fetch-tags: false
+2025-03-28T19:43:40.9641152Z   show-progress: true
+2025-03-28T19:43:40.9641537Z   lfs: false
+2025-03-28T19:43:40.9641892Z   set-safe-directory: true
+2025-03-28T19:43:40.9642753Z ##[endgroup]
+2025-03-28T19:43:41.1342601Z Syncing repository: profemprestes/astro-sassify-template
+2025-03-28T19:43:41.1344533Z ##[group]Getting Git version info
+2025-03-28T19:43:41.1345517Z Working directory is '/home/runner/work/astro-sassify-template/astro-sassify-template'
+2025-03-28T19:43:41.1346689Z [command]/usr/bin/git version
+2025-03-28T19:43:41.1387422Z git version 2.49.0
+2025-03-28T19:43:41.1416396Z ##[endgroup]
+2025-03-28T19:43:41.1430307Z Temporarily overriding HOME='/home/runner/work/_temp/14013927-f22f-44f4-bc77-387911820b42' before making global git config changes
+2025-03-28T19:43:41.1432855Z Adding repository directory to the temporary git global config as a safe directory
+2025-03-28T19:43:41.1442740Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/astro-sassify-template/astro-sassify-template
+2025-03-28T19:43:41.1479863Z Deleting the contents of '/home/runner/work/astro-sassify-template/astro-sassify-template'
+2025-03-28T19:43:41.1483494Z ##[group]Initializing the repository
+2025-03-28T19:43:41.1488040Z [command]/usr/bin/git init /home/runner/work/astro-sassify-template/astro-sassify-template
+2025-03-28T19:43:41.1543253Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-03-28T19:43:41.1544657Z hint: is subject to change. To configure the initial branch name to use in all
+2025-03-28T19:43:41.1546516Z hint: of your new repositories, which will suppress this warning, call:
+2025-03-28T19:43:41.1547830Z hint:
+2025-03-28T19:43:41.1548818Z hint: 	git config --global init.defaultBranch <name>
+2025-03-28T19:43:41.1549628Z hint:
+2025-03-28T19:43:41.1550197Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-03-28T19:43:41.1551142Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-03-28T19:43:41.1551864Z hint:
+2025-03-28T19:43:41.1552625Z hint: 	git branch -m <name>
+2025-03-28T19:43:41.1554062Z Initialized empty Git repository in /home/runner/work/astro-sassify-template/astro-sassify-template/.git/
+2025-03-28T19:43:41.1559602Z [command]/usr/bin/git remote add origin https://github.com/profemprestes/astro-sassify-template
+2025-03-28T19:43:41.1591785Z ##[endgroup]
+2025-03-28T19:43:41.1592945Z ##[group]Disabling automatic garbage collection
+2025-03-28T19:43:41.1597204Z [command]/usr/bin/git config --local gc.auto 0
+2025-03-28T19:43:41.1625766Z ##[endgroup]
+2025-03-28T19:43:41.1626544Z ##[group]Setting up auth
+2025-03-28T19:43:41.1632728Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-03-28T19:43:41.1663294Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-03-28T19:43:41.1948205Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-03-28T19:43:41.1981125Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-03-28T19:43:41.2211325Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-03-28T19:43:41.2256637Z ##[endgroup]
+2025-03-28T19:43:41.2257444Z ##[group]Fetching the repository
+2025-03-28T19:43:41.2267195Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/propio*:refs/remotes/origin/propio* +refs/tags/propio*:refs/tags/propio*
+2025-03-28T19:43:41.5578825Z From https://github.com/profemprestes/astro-sassify-template
+2025-03-28T19:43:41.5581544Z  * [new branch]      propio     -> origin/propio
+2025-03-28T19:43:41.5604728Z ##[endgroup]
+2025-03-28T19:43:41.5605819Z ##[group]Determining the checkout info
+2025-03-28T19:43:41.5612201Z [command]/usr/bin/git branch --list --remote origin/propio
+2025-03-28T19:43:41.5635727Z   origin/propio
+2025-03-28T19:43:41.5642549Z ##[endgroup]
+2025-03-28T19:43:41.5646197Z [command]/usr/bin/git sparse-checkout disable
+2025-03-28T19:43:41.5684201Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-03-28T19:43:41.5710848Z ##[group]Checking out the ref
+2025-03-28T19:43:41.5714076Z [command]/usr/bin/git checkout --progress --force -B propio refs/remotes/origin/propio
+2025-03-28T19:43:41.5858163Z Switched to a new branch 'propio'
+2025-03-28T19:43:41.5861703Z branch 'propio' set up to track 'origin/propio'.
+2025-03-28T19:43:41.5869317Z ##[endgroup]
+2025-03-28T19:43:41.5872179Z ##[group]Setting up auth for fetching submodules
+2025-03-28T19:43:41.5874656Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-03-28T19:43:41.5908906Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-03-28T19:43:41.5937720Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-03-28T19:43:41.5967597Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-200821034@github.com:
+2025-03-28T19:43:41.5993565Z ##[endgroup]
+2025-03-28T19:43:41.5995379Z ##[group]Fetching submodules
+2025-03-28T19:43:41.5997472Z [command]/usr/bin/git submodule sync --recursive
+2025-03-28T19:43:41.6237409Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-03-28T19:43:41.6476779Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-03-28T19:43:41.6728535Z ##[endgroup]
+2025-03-28T19:43:41.6730338Z ##[group]Persisting credentials for submodules
+2025-03-28T19:43:41.6735236Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-03-28T19:43:41.6997410Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-03-28T19:43:41.7249231Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-03-28T19:43:41.7522563Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-200821034@github.com:'
+2025-03-28T19:43:41.7763575Z ##[endgroup]
+2025-03-28T19:43:41.7800790Z [command]/usr/bin/git log -1 --format=%H
+2025-03-28T19:43:41.7826047Z d3392c5b804659ae6c9d318f4f455b2d7f574ebe
+2025-03-28T19:43:41.8181037Z ##[group]Run actions/upload-pages-artifact@v3
+2025-03-28T19:43:41.8182447Z with:
+2025-03-28T19:43:41.8183226Z   path: .
+2025-03-28T19:43:41.8184085Z   name: github-pages
+2025-03-28T19:43:41.8185009Z   retention-days: 1
+2025-03-28T19:43:41.8185852Z ##[endgroup]
+2025-03-28T19:43:41.8313229Z ##[group]Run echo ::group::Archive artifact
+2025-03-28T19:43:41.8314572Z [36;1mecho ::group::Archive artifact[0m
+2025-03-28T19:43:41.8315635Z [36;1mtar \[0m
+2025-03-28T19:43:41.8316550Z [36;1m  --dereference --hard-dereference \[0m
+2025-03-28T19:43:41.8317766Z [36;1m  --directory "$INPUT_PATH" \[0m
+2025-03-28T19:43:41.8319020Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2025-03-28T19:43:41.8320830Z [36;1m  --exclude=.git \[0m
+2025-03-28T19:43:41.8322253Z [36;1m  --exclude=.github \[0m
+2025-03-28T19:43:41.8323210Z [36;1m  .[0m
+2025-03-28T19:43:41.8324023Z [36;1mecho ::endgroup::[0m
+2025-03-28T19:43:41.8355939Z shell: /usr/bin/sh -e {0}
+2025-03-28T19:43:41.8356887Z env:
+2025-03-28T19:43:41.8357667Z   INPUT_PATH: .
+2025-03-28T19:43:41.8358447Z ##[endgroup]
+2025-03-28T19:43:41.8429193Z ##[group]Archive artifact
+2025-03-28T19:43:41.8443204Z ./
+2025-03-28T19:43:41.8444437Z ./pnpm-lock.yaml
+2025-03-28T19:43:41.8445820Z ./crearpaginas.py
+2025-03-28T19:43:41.8449113Z ./tailwind.config.mjs
+2025-03-28T19:43:41.8450484Z ./README.md
+2025-03-28T19:43:41.8451647Z ./tsconfig.json
+2025-03-28T19:43:41.8453090Z ./src/
+2025-03-28T19:43:41.8454236Z ./src/assets/
+2025-03-28T19:43:41.8455497Z ./src/assets/background.svg
+2025-03-28T19:43:41.8456941Z ./src/assets/img/
+2025-03-28T19:43:41.8458221Z ./src/assets/img/faqs.png
+2025-03-28T19:43:41.8459648Z ./src/assets/astro.svg
+2025-03-28T19:43:41.8460993Z ./src/assets/Logo.svg
+2025-03-28T19:43:41.8462507Z ./src/styles/
+2025-03-28T19:43:41.8463762Z ./src/styles/transitions.css
+2025-03-28T19:43:41.8465265Z ./src/styles/global.css
+2025-03-28T19:43:41.8466659Z ./src/styles/global.scss
+2025-03-28T19:43:41.8468036Z ./src/pages/
+2025-03-28T19:43:41.8469268Z ./src/pages/404.astro
+2025-03-28T19:43:41.8470691Z ./src/pages/terms-conditions.astro
+2025-03-28T19:43:41.8472825Z ./src/pages/contacto.astro
+2025-03-28T19:43:41.8474442Z ./src/pages/cotizador-envios-express.astro
+2025-03-28T19:43:41.8476285Z ./src/pages/changelog.astro
+2025-03-28T19:43:41.8477788Z ./src/pages/case-study.astro
+2025-03-28T19:43:41.8479627Z ./src/pages/index.astro
+2025-03-28T19:43:41.8480982Z ./src/pages/privacy-policy.astro
+2025-03-28T19:43:41.8482330Z ./src/pages/envios-emprendedores.astro
+2025-03-28T19:43:41.8483469Z ./src/pages/nuestrasredes.astro
+2025-03-28T19:43:41.8484431Z ./src/pages/faqs.astro
+2025-03-28T19:43:41.8485296Z ./src/pages/inicio.astro
+2025-03-28T19:43:41.8486227Z ./src/pages/delivery-moto-fija.astro
+2025-03-28T19:43:41.8487254Z ./src/pages/blog/
+2025-03-28T19:43:41.8488088Z ./src/pages/blog/index.astro
+2025-03-28T19:43:41.8489033Z ./src/pages/blog/[slug].astro
+2025-03-28T19:43:41.8489992Z ./src/pages/company.astro
+2025-03-28T19:43:41.8490991Z ./src/pages/delivery-moto-express.astro
+2025-03-28T19:43:41.8492245Z ./src/pages/features.astro
+2025-03-28T19:43:41.8493179Z ./src/pages/pricing.astro
+2025-03-28T19:43:41.8494163Z ./src/pages/mensajeria-envios-express.astro
+2025-03-28T19:43:41.8495309Z ./src/pages/sobre-nosotros.astro
+2025-03-28T19:43:41.8496306Z ./src/pages/contact.astro
+2025-03-28T19:43:41.8497271Z ./src/pages/mensajeria-envios-lowcost.astro
+2025-03-28T19:43:41.8498352Z ./src/pages/career.astro
+2025-03-28T19:43:41.8499248Z ./src/pages/integrations.astro
+2025-03-28T19:43:41.8500267Z ./src/pages/cotizador-envios-lowcost.astro
+2025-03-28T19:43:41.8501399Z ./src/pages/preguntasfrecuentes.astro
+2025-03-28T19:43:41.8502622Z ./src/pages/reviews.astro
+2025-03-28T19:43:41.8503496Z ./src/layouts/
+2025-03-28T19:43:41.8504261Z ./src/layouts/Layout copy.astro
+2025-03-28T19:43:41.8505174Z ./src/layouts/Inicio.astro
+2025-03-28T19:43:41.8506045Z ./src/layouts/Layout.astro
+2025-03-28T19:43:41.8506889Z ./src/components/
+2025-03-28T19:43:41.8507680Z ./src/components/Welcome.astro
+2025-03-28T19:43:41.8508862Z ./src/components/HeroSection.astro
+2025-03-28T19:43:41.8509941Z ./src/components/bannerazul.astro
+2025-03-28T19:43:41.8510940Z ./src/components/Features.astro
+2025-03-28T19:43:41.8512176Z ./src/components/Pricing.astro
+2025-03-28T19:43:41.8513201Z ./src/components/nav.astro
+2025-03-28T19:43:41.8514159Z ./src/components/Header copy.astro
+2025-03-28T19:43:41.8515193Z ./src/components/HeroFaq.astro
+2025-03-28T19:43:41.8516177Z ./src/components/Header.astro
+2025-03-28T19:43:41.8517180Z ./src/components/socialbanner.astro
+2025-03-28T19:43:41.8518250Z ./src/components/Emprendedores.astro
+2025-03-28T19:43:41.8519289Z ./src/components/FAQ.astro
+2025-03-28T19:43:41.8520227Z ./src/components/Footer copy.astro
+2025-03-28T19:43:41.8521301Z ./src/components/Testimonials copy.astro
+2025-03-28T19:43:41.8522635Z ./src/components/Hero.astro
+2025-03-28T19:43:41.8523587Z ./src/components/Footer.astro
+2025-03-28T19:43:41.8524565Z ./src/components/Calltoaction.astro
+2025-03-28T19:43:41.8525597Z ./src/components/Head.astro
+2025-03-28T19:43:41.8526547Z ./src/components/Newsletter.astro
+2025-03-28T19:43:41.8527562Z ./src/components/Contact.astro
+2025-03-28T19:43:41.8528553Z ./src/components/Testimonials.astro
+2025-03-28T19:43:41.8529532Z ./src/scripts/
+2025-03-28T19:43:41.8530326Z ./src/scripts/transitions.js
+2025-03-28T19:43:41.8531223Z ./package.json
+2025-03-28T19:43:41.8532192Z ./.nojekyll
+2025-03-28T19:43:41.8532904Z ./.vscode/
+2025-03-28T19:43:41.8533627Z ./.vscode/launch.json
+2025-03-28T19:43:41.8534465Z ./.vscode/extensions.json
+2025-03-28T19:43:41.8535334Z ./astro.config.mjs
+2025-03-28T19:43:41.8596970Z ./package-lock.json
+2025-03-28T19:43:41.8597912Z ./.gitignore
+2025-03-28T19:43:41.8598731Z ./public/
+2025-03-28T19:43:41.8599470Z ./public/favicon.svg
+2025-03-28T19:43:41.8600310Z ./public/scripts/
+2025-03-28T19:43:41.8601172Z ./public/scripts/transitions.js
+2025-03-28T19:43:41.8602879Z ##[endgroup]
+2025-03-28T19:43:41.8737909Z ##[group]Run actions/upload-artifact@v4
+2025-03-28T19:43:41.8738939Z with:
+2025-03-28T19:43:41.8739693Z   name: github-pages
+2025-03-28T19:43:41.8740609Z   path: /home/runner/work/_temp/artifact.tar
+2025-03-28T19:43:41.8741894Z   retention-days: 1
+2025-03-28T19:43:41.8742839Z   if-no-files-found: error
+2025-03-28T19:43:41.8743753Z   compression-level: 6
+2025-03-28T19:43:41.8744595Z   overwrite: false
+2025-03-28T19:43:41.8745422Z   include-hidden-files: false
+2025-03-28T19:43:41.8746342Z ##[endgroup]
+2025-03-28T19:43:42.0841343Z With the provided path, there will be 1 file uploaded
+2025-03-28T19:43:42.0846219Z Artifact name is valid!
+2025-03-28T19:43:42.0847670Z Root directory input is valid!
+2025-03-28T19:43:42.1956704Z Beginning upload of artifact content to blob storage
+2025-03-28T19:43:42.2885091Z Uploaded bytes 515844
+2025-03-28T19:43:42.3017687Z Finished uploading artifact content to blob storage!
+2025-03-28T19:43:42.3021514Z SHA256 digest of uploaded artifact zip is e5b86475bc43fb52dcd3e614165b6b2e2a8e0b53598195964e3c38b3ff3116c0
+2025-03-28T19:43:42.3023498Z Finalizing artifact upload
+2025-03-28T19:43:42.3817232Z Artifact github-pages.zip successfully finalized. Artifact ID 2841544749
+2025-03-28T19:43:42.3818826Z Artifact github-pages has been successfully uploaded! Final size is 515844 bytes. Artifact ID is 2841544749
+2025-03-28T19:43:42.3826678Z Artifact download URL: https://github.com/profemprestes/astro-sassify-template/actions/runs/14136684462/artifacts/2841544749
+2025-03-28T19:43:42.4019859Z Post job cleanup.
+2025-03-28T19:43:42.4970677Z [command]/usr/bin/git version
+2025-03-28T19:43:42.5010671Z git version 2.49.0
+2025-03-28T19:43:42.5056767Z Temporarily overriding HOME='/home/runner/work/_temp/85d298da-1acf-483b-b20a-88a759fa1536' before making global git config changes
+2025-03-28T19:43:42.5058182Z Adding repository directory to the temporary git global config as a safe directory
+2025-03-28T19:43:42.5072170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/astro-sassify-template/astro-sassify-template
+2025-03-28T19:43:42.5109733Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-03-28T19:43:42.5144897Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-03-28T19:43:42.5384878Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-03-28T19:43:42.5407327Z http.https://github.com/.extraheader
+2025-03-28T19:43:42.5420747Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-03-28T19:43:42.5455620Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-03-28T19:43:42.5835750Z Cleaning up orphan processes
