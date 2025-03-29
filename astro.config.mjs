@@ -2,14 +2,13 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import alpinejs from '@astrojs/alpinejs';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://profemprestes.github.io',
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/astro-sassify-template' : '/',
   integrations: [tailwind(), alpinejs()],
   output: 'static',
   build: {
-    assets: 'assets',
+    assets: 'assets'
   },
   trailingSlash: 'never'
 });
