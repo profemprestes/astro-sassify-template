@@ -42,7 +42,7 @@ jobs:
 
           export default defineConfig({
             site: 'https://profemprestes.github.io',
-            base: '/astro-sassify-template',
+            base: '/',
             integrations: [
               tailwind(),
               alpinejs()
