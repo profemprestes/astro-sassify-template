@@ -226,9 +226,12 @@ const nosotrosItems = [
       <li x-data="{ open: false }">
         <button 
           @click="open = !open; activeSubmenu = open ? 'cotizar' : null" 
-          class="flex items-center justify-between w-full px-4 py-2 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-all"
+          class="flex items-center justify-between w-full px-4 py-3 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-all"
         >
-          <span>Cotizar</span>
+          <div class="flex items-center">
+            <i class="fas fa-calculator mr-3 w-5 text-center"></i>
+            <span>Cotizar</span>
+          </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{'rotate-180': open}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -259,9 +262,12 @@ const nosotrosItems = [
       <li x-data="{ open: false }">
         <button 
           @click="open = !open; activeSubmenu = open ? 'nosotros' : null" 
-          class="flex items-center justify-between w-full px-4 py-2 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-all"
+          class="flex items-center justify-between w-full px-4 py-3 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-all"
         >
-          <span>Nosotros</span>
+          <div class="flex items-center">
+            <i class="fas fa-users mr-3 w-5 text-center"></i>
+            <span>Nosotros</span>
+          </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{'rotate-180': open}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -290,7 +296,8 @@ const nosotrosItems = [
       
       <!-- Contacto -->
       <li>
-        <a href="/contacto" class="block px-4 py-2 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors">
+        <a href="/contacto" class="flex items-center px-4 py-3 text-blue-700 hover:text-amber-500 dark:text-blue-100 dark:hover:text-amber-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-all">
+          <i class="fas fa-envelope mr-3 w-5 text-center"></i>
           Contacto
         </a>
       </li>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.scss';
 import '../styles/transitions.css';
+import Head from '../components/Head.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
@@ -19,30 +20,13 @@ const {
 <!doctype html>
 <html lang={lang} x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="https://ss-static-001.esmsv.com/r/content/host1/4737689b928ca57a9983842e16eab90a//img/LogoEnviosDosRuedas.webp" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#1a365d" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <title>{title} | Envios DosRuedas</title>
-    
-    <!-- Preload critical fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <Head 
+      title={title}
+      description={description}
+    />
     
     <ViewTransitions />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="antialiased bg-white dark:bg-blue-950 text-blue-900 dark:text-blue-100 transition-colors duration-300">
     <div id="page-wrapper" class="page-transition-wrapper">
